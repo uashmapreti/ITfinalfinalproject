@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+/* CSS styles for the gallery */
+body{background-color:rgb(246, 214, 214);height: 1600px;}
+div.gallery {
+  margin: 5px;
+  border: 1px solid #ccc;
+  float: left;
+  width: calc(50); /* Approximately one-third width for each image with margin */
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: 600px;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+  font-size: calc(20px); 
+}
+header {
+    background-color: #DCBFFF;
+    color: rgb(0, 0, 0);
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5px auto;
+    padding: 0 20px;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #d76c0f;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-right: 20px;
+}
+
+.nav-links a {
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.nav-links a:hover {
+    background-color: #40b736;
+    border-radius: 4px;
+    color: white;
+}
+</style>
+
+</head>
+<body >
+
+
+
+
+    <header>
+        <nav>
+            <div class="logo">
+                 BEST OFF
+            </div>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="course.html">Courses</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+<script>
+function addNewImage(imageSrc, altText, description) {
+  var gallery = document.createElement('div');
+  gallery.className = 'gallery';
+
+  var link = document.createElement('a');
+  link.target = '_blank';
+  link.href = imageSrc;
+
+  var img = document.createElement('img');
+  img.src = imageSrc;
+  img.alt = altText;
+  img.width = 300;
+  img.height = 150;
+
+  var desc = document.createElement('div');
+  desc.className = 'desc';
+  desc.textContent = description;
+
+  link.appendChild(img);
+  gallery.appendChild(link);
+  gallery.appendChild(desc);
+
+  document.body.appendChild(gallery);
+}
+
+// Add new images
+addNewImage('11.jpg', 'data science', 'I really like playing with data so i became the data scientist after completing my cour in best off');
+addNewImage('1.jpg', 'software engineer', 'Becoming software engineer has not been this easy');
+addNewImage('22.jpg', 'coding', ' completed my bachelor in management but i really want to learn coding so started my course from best off');
+addNewImage('2.jpg', 'coding', 'Became good cloud developer. Thank you Best off!!')
+addNewImage('3.jpg', 'coding', 'Starting coding was not easy but  best off really help me alot');
+addNewImage('33.jpg', 'coding', 'I am glad i join the course here')
+addNewImage('4.jpg', 'coding', 'I really like codinfg and this webisite and course available really help me');
+addNewImage('44.jpg', 'programme', 'Thank you best off for helping me');
+
+
+</script>
+
+</body>
+</html>
